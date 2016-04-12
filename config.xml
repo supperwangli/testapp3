@@ -13,7 +13,7 @@
     <plugin name="cordova-plugin-camera" source="npm" spec="&gt;1.0.0" />
     <plugin name="cordova-plugin-device" source="npm" spec="&gt;1.0.0" />
     <plugin name="cordova-plugin-file" source="npm" spec="&gt;1.0.0" />
-    <plugin name="cordova-barcodescanner-plugin" source="npm" spec="&gt;0.7.0" />
+    <plugin name="cordova-barcodescanner-plugin" source="npm" spec="&gt;0.6.0" />
     <platform name="android">
     </platform>
     <platform name="ios">
