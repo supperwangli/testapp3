@@ -8,25 +8,20 @@
   
     <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8" src="barcodescanner.js"></script>
     <script type="text/javascript" charset="utf-8">    
            
   function btnbarcode() {       
-                window.plugins.barcodeScanner.scan(   
-                        BarcodeScanner.Type.QR_CODE,   
-                        function(result) {  
-                            $("#barcodediv").html(""+result);  
-                        },   
-                        function(error) {  
-                            $("#barcodediv").html("扫描失败："+result);  
-                        },   
-                        {  
-                            installTitle: "安装提示",  
-                            installMessage:"是否安装开源免费的ZXing二维码扫描器",  
-                            yesString:"确定",  
-                            noString:"取消"  
-                        }  
-                        );
+   cordova.plugins.barcodeScanner.scan(
+         function (result) {
+	           alert("We got a barcode\n" +
+		                   "Result: " + result.text + "\n" +
+				                   "Format: " + result.format + "\n" +
+						                   "Cancelled: " + result.cancelled);
+								         }, 
+									       function (error) {
+									                 alert("Scanning failed: " + error);
+											       }
+											          );
   }
 
 </script>       
